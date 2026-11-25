@@ -1,0 +1,15 @@
+STHETIC CENTER — SITE COMPLETO PARA HOSPEDAGEM
+
+Domínio preparado: https://www.stheticcenter.com.br
+
+1. Extraia o ZIP.
+2. O site está dentro da pasta public_html. Abra public_html/index.html para uma visualização local.
+3. Faça backup do site existente e confira a raiz documental do domínio na hospedagem.
+4. Envie o CONTEÚDO da pasta public_html para essa raiz, incluindo o arquivo .htaccess. Não crie outra pasta public_html dentro da raiz existente.
+5. Confirme o certificado SSL do domínio e do www antes de ativar os redirecionamentos. Se já existir .htaccess, examine e preserve as configurações do provedor ao integrar as regras.
+
+Este pacote contém a página inicial, 25 páginas de procedimentos, fotos, galeria, FAQs, estilos e scripts, Google tag, ponte de WhatsApp, .htaccess, sitemap.xml, robots.txt e llms.txt.
+
+O sitemap contém 26 URLs. A página WhatsApp conserva noindex e não entra no sitemap. As demais páginas desta versão de PRODUÇÃO permitem indexação. As credenciais não estão incluídas.
+
+STATUS: PACOTE PREPARADO, SEM PUBLICAÇÃO NO FTP. Nenhum arquivo remoto foi alterado. O FTP direto estava inacessível e a autenticação segura do cPanel não foi concluída. O SSL e as regras Apache ainda precisam ser conferidos no servidor.

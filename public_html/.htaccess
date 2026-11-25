@@ -1,0 +1,22 @@
+# Sthetic Center — instalar na raiz do site (normalmente public_html).
+# Requer SSL valido para stheticcenter.com.br e www.stheticcenter.com.br.
+DirectoryIndex index.html
+RewriteEngine On
+
+# Procedimento removido permanentemente.
+RewriteRule ^procedimentos/laser-co2-fracionado-aguas-claras(?:/.*)?$ - [G,L,NC]
+
+# Permitir a validacao/renovacao de certificados (AutoSSL / ACME).
+RewriteRule ^\.well-known/acme-challenge/ - [L]
+
+# Remover index.html somente quando solicitado pelo visitante.
+# THE_REQUEST evita loops com o DirectoryIndex interno do Apache.
+RewriteCond %{THE_REQUEST} \s/+[^?\s]*index\.html[?\s] [NC]
+RewriteRule ^(.*)index\.html$ https://www.stheticcenter.com.br/$1 [R=301,L,NE]
+
+# Destino fixo: preserva caminho e query string, sem confiar no Host recebido.
+# O filtro de dominio impede que esta regra redirecione previas de outros hosts.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?stheticcenter\.com\.br(?::[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.stheticcenter\.com\.br$ [NC]
+RewriteRule ^ https://www.stheticcenter.com.br%{REQUEST_URI} [R=301,L,NE]

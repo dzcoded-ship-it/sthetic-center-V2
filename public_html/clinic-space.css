@@ -1,0 +1,31 @@
+.clinic-space{background:#ebe6da;border-bottom:1px solid var(--line)}
+.clinic-space-gallery{display:grid;grid-template-columns:1.05fr 1fr 1fr;grid-template-rows:280px 280px;gap:20px}
+.clinic-space-photo{position:relative;min-width:0;overflow:hidden;background:#c9c0ae}
+.clinic-space-photo--lead{grid-row:span 2}.clinic-space-photo--wide{grid-column:span 2}
+.clinic-space-photo>a{display:block;width:100%;height:100%;position:relative;overflow:hidden}
+.clinic-space-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.clinic-space-photo--lead img{object-position:center 42%}.clinic-space-photo--wide img{object-position:center top}
+.clinic-space-photo>a:hover img{transform:scale(1.025)}
+.clinic-space-photo figcaption{position:absolute;inset:auto 0 0;pointer-events:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:46px 21px 18px;background:linear-gradient(transparent,rgba(10,12,8,.82));color:#fff;font-size:12px}
+.clinic-space-photo figcaption span{font-size:9px;letter-spacing:1.5px;color:#e5d6ba}
+.clinic-space-enlarge{position:absolute;right:16px;top:16px;display:grid;place-items:center;width:34px;height:34px;background:#f4f1e9e8;color:#141510;border:1px solid #ddd3be}
+.clinic-space-photo a:focus-visible{outline:3px solid #a77733;outline-offset:-5px}
+.clinic-space-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px}
+.clinic-space-bottom p{font-size:11px;line-height:1.8;color:var(--muted)}
+.clinic-space-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:55px;padding-top:38px;border-top:1px solid #cfc8b8}
+.clinic-space-details .eyebrow{display:block;color:#817047;margin-bottom:14px;font-size:9px}
+.clinic-space-details h3{font-size:24px;margin-bottom:14px;max-width:270px}
+.clinic-space-details p{font-size:12px;line-height:1.85;color:var(--muted);max-width:300px}
+.clinic-space-dialog{width:min(100% - 32px,1080px);max-width:1080px;max-height:calc(100dvh - 32px);padding:25px 30px 18px;background:#141510;color:var(--paper);border:1px solid #5b513c;overflow:auto}
+.clinic-space-dialog::backdrop{background:rgba(0,0,0,.85)}
+.clinic-space-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}
+.clinic-space-dialog .eyebrow{font-size:9px;color:var(--gold);margin-bottom:7px}.clinic-space-dialog h2{font-size:25px;letter-spacing:0}
+.clinic-space-close{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;border:1px solid #625a46;background:none;color:var(--paper)}.clinic-space-close .bi{width:25px;height:25px}
+.clinic-space-dialog figure img{width:100%;height:calc(100dvh - 250px);min-height:180px;object-fit:contain;background:#0d0e0b}
+.clinic-space-dialog figcaption{text-align:center;font-size:11px;color:#d9d1c0;padding:12px 0}
+.clinic-space-controls{display:flex;justify-content:space-between;gap:20px}.clinic-space-controls button{display:flex;align-items:center;justify-content:center;gap:13px;min-height:44px;border:1px solid #625a46;padding:10px 18px;background:none;color:var(--paper);font-size:12px}
+.clinic-space-controls button:hover,.clinic-space-close:hover{background:#303125}.clinic-space-next-icon{display:inline-flex;transform:rotate(180deg)}
+body.clinic-space-open{overflow:hidden}
+@media(max-width:900px){.clinic-space-gallery{grid-template-rows:235px 235px;gap:15px}.clinic-space-details{gap:25px}.clinic-space-photo figcaption{padding-inline:14px;font-size:11px}}
+@media(max-width:650px){.clinic-space-gallery{grid-template-columns:1fr 1fr;grid-template-rows:250px 220px 230px;gap:12px}.clinic-space-photo--lead{grid-row:auto;grid-column:1/-1}.clinic-space-photo--lead img{object-position:center 10%}.clinic-space-photo--wide{grid-column:1/-1}.clinic-space-bottom{align-items:flex-start;flex-direction:column;gap:18px}.clinic-space-details{grid-template-columns:1fr;gap:28px;margin-top:35px;padding-top:28px}.clinic-space-details h3{font-size:25px;max-width:none}.clinic-space-details p{max-width:none}.clinic-space-photo figcaption{font-size:10px;padding:38px 12px 12px;gap:5px}.clinic-space-photo figcaption span{font-size:8px;letter-spacing:.3px}.clinic-space-enlarge{right:10px;top:10px;width:30px;height:30px}.clinic-space-dialog{width:calc(100% - 20px);max-height:calc(100dvh - 20px);padding:17px 14px 14px}.clinic-space-dialog h2{font-size:22px}.clinic-space-dialog .eyebrow{font-size:8px;letter-spacing:1px}.clinic-space-dialog figure img{height:calc(100dvh - 235px)}.clinic-space-controls button{padding-inline:14px}}
+@media(prefers-reduced-motion:reduce){.clinic-space-photo img{transition:none}.clinic-space-photo>a:hover img{transform:none}}

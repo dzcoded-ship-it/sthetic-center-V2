@@ -1,0 +1,14 @@
+DADOS-FTP.local.txt
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+backup-hospedagem/
+backup/
+PUBLICACAO-*.json
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
